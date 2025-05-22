@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+if [ builder/Tasks.java -nt builder/Tasks.class ] || [ builder/BuildUtils.java -nt builder/BuildUtils.class ]; then
+    javac -cp builder/commons-compress-1.20.jar builder/Tasks.java builder/BuildUtils.java 
+fi
+java -cp ".:builder/commons-compress-1.20.jar" -Dsun.security.pkcs11.enable-solaris=false builder.Tasks "$@"
