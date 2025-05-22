@@ -1,5 +1,5 @@
 
-# Groovy Chunker for RAG
+# RAG Chunker for Groovy Source Code
 
 This code breaks a Groovy source file into reasonable chunks that would
 be needed by a RAG system.
